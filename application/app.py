@@ -59,7 +59,7 @@ def plot_sentiment_distribution(df):
     # Count the occurrences of each sentiment
     sentiment_counts = df["Sentiment"].value_counts()
 
-    # Plot the pie chart
+    # Plot the pie chart aiuchhcvdjcgvdhg
     fig, ax = plt.subplots()
     ax.pie(sentiment_counts, labels=sentiment_counts.index, autopct='%1.1f%%', startangle=90, colors=["#ff9999","#66b3ff", "#99ff99"])
     ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
