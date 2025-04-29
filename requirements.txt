@@ -1,7 +1,9 @@
 streamlit
 transformers
-pandas
-matplotlib
-wordcloud
 torch
-
+wordcloud
+matplotlib
+pandas
+sentencepiece
+huggingface_hub
+scipy
