@@ -16,7 +16,7 @@ def analyze_sentiment_batch(reviews):
     Returns:
         list: A list of sentiment labels (Positive, Negative, or Neutral).
     """
-    if not all(isinstance(review, str) and review.strip() for review in reviews):
+    if not all(isinstance(review, str) and review.strip() for review in reviews):   
         return ["No Text"] * len(reviews)  # Handle empty or invalid text
 
     # Perform sentiment analysis in batch
@@ -155,7 +155,7 @@ elif tabs == "Batch Processing":
                     # Allow the user to download each set of reviews as a separate CSV file
                     st.write("Download the sentiment results as CSV files:")
 
-                    # Positive reviews download (with only user-selected review column and 'Sentiment')
+                    # Positive reviews download
                     positive_file = "positive_reviews.csv"
                     positive_reviews_filtered = positive_reviews[[review_column, "Sentiment"]]
                     positive_reviews_filtered.to_csv(positive_file, index=False)
@@ -167,7 +167,7 @@ elif tabs == "Batch Processing":
                             mime="text/csv"
                         )
 
-                    # Neutral reviews download (with only user-selected review column and 'Sentiment')
+                    # Neutral reviews download
                     neutral_file = "neutral_reviews.csv"
                     neutral_reviews_filtered = neutral_reviews[[review_column, "Sentiment"]]
                     neutral_reviews_filtered.to_csv(neutral_file, index=False)
@@ -179,7 +179,7 @@ elif tabs == "Batch Processing":
                             mime="text/csv"
                         )
 
-                    # Negative reviews download (with only user-selected review column and 'Sentiment')
+                    # Negative reviews download
                     negative_file = "negative_reviews.csv"
                     negative_reviews_filtered = negative_reviews[[review_column, "Sentiment"]]
                     negative_reviews_filtered.to_csv(negative_file, index=False)
